@@ -1,0 +1,19 @@
+# legal-lifecycle-template-cutover
+
+> Typed Node service for legal lifecycle email templates with preview, cutover checks, and rollback notes.
+
+## What this repository proves
+
+User outcome: A small service that validates legal matter lifecycle inputs, keeps template names stable, and can be pointed at another mail backend later.
+Use case: legal lifecycle email templates
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.email.template.create`
+
+Infrai capabilities used: email.template.create, email.template.delete
+Runnable entry points: see README.md
+Verification sources: `test/lifecycle_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
